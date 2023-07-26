@@ -4,6 +4,7 @@ import io.grpc.Channel;
 import io.grpc.Server;
 import io.grpc.ServerBuilder;
 import io.grpc.ServerInterceptor;
+import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
 import java.lang.annotation.Retention;
@@ -30,6 +31,7 @@ import org.springframework.context.annotation.Import;
 @Retention(RetentionPolicy.RUNTIME)
 @Import(GrpcMockConfiguration.class)
 @PropertyMapping("grpcmock.server")
+@Documented
 @Inherited
 public @interface AutoConfigureGrpcMock {
 
